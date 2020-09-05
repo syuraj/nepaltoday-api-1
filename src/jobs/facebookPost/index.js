@@ -25,6 +25,7 @@ module.exports = async function(context){
         await browserPage.type('#pass', process.env.FACEBOOK_PASSWORD)
         await browserPage.click(`[type="submit"]`)
         await browserPage.waitForNavigation()
+        await browserPage.waitFor(10000)
         await browserPage.waitForSelector(`[aria-label="Write a post..."]`)
         await browserPage.click(`[aria-label="Write a post..."]`)
         // await browserPage.waitForSelector('div.g9en0fbe > div > img')
