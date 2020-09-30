@@ -11,6 +11,7 @@ type Article {
 	createdDate: String
 	modifiedDate: String
 	topic: String
+	tags: [String]
 }
 
 input ArticleCriteria {
@@ -57,7 +58,8 @@ input TweetCriteria {
 type CoronaStats {
 	createdDate: String
 	stats: [CoronaMetrics]
-	worldSummary: worldSummary
+	worldSummary: worldSummary,
+	source: String
 }
 
 type worldSummary {
@@ -79,6 +81,7 @@ type DistrictCoronaStats {
 	createdDate: String
 	timeLine: coronaTimeLine
 	districts: [DistrictCoronaMetrics]
+	source: String
 }
 
 type coronaTimeLine {

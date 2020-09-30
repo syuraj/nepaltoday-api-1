@@ -70,4 +70,14 @@ module.exports = {
 		const difference = new Set([...set1].filter((x) => !set2.has(x)))
 		return Array.from(difference)
 	},
+
+	getTagsFromArticle: function (trendingTopics, content) {
+		let tags = []
+		trendingTopics.forEach(topic=>{
+			if(content.indexOf(topic) >=0 ){
+				tags.push(topic)
+			}
+		})
+		return tags
+	}
 }

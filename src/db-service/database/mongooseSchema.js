@@ -21,6 +21,7 @@ const Article = mongoose.model(
 		topic: { type: String },
 		createdAt: { type: Date, expires: expiryTime, default: Date.now },
 		nouns: [String],
+		tags: [String]
 	}),
 )
 
@@ -90,6 +91,7 @@ const CoronaStats = mongoose.model(
 			totalDeaths: Number,
 			newDeaths: Number,
 		},
+		source: String
 	}),
 )
 
@@ -117,14 +119,15 @@ const DistrictCoronaStats = mongoose.model(
 				deaths: Number,
 			},
 		],
+		source: String
 	}),
 )
 
 const TrendingTweetCount = mongoose.model(
 	'TrendingTweetCount',
 	new Schema({
-		createdDate: String,
-		createdAt: { type: Date, default: Date.now() },
+		createdDate: { type: Date, default: Date.now()},
+		createdAt: { type: Date, default: Date.now(), expires: expiryTime },
 		trendings: [
 			{
 				category: String,

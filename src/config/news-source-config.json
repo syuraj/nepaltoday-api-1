@@ -7,6 +7,11 @@
 		"weight": 50,
 		"pages": [
 			{
+				"url": "https://ekantipur.com",
+				"category": "headline",
+				"link-selector": "h1 > a"
+			},
+			{
 				"url": "https://ekantipur.com/news",
 				"category": "news",
 				"link-selector": "#wrapper > main > section article > div.teaser > a"
@@ -18,7 +23,7 @@
 			},
 			{
 				"url": "https://ekantipur.com/opinion",
-				"category": "opinion",
+				"category": "social",
 				"link-selector": "#wrapper > main > section article > div.teaser > a"
 			},
 			{
@@ -49,8 +54,13 @@
 		"weight": 45,
 		"pages": [
 			{
+				"url": "https://www.setopati.com",
+				"category": "headline",
+				"link-selector": "#content > div > section > div > div > div > a"
+			},
+			{
 				"url": "https://www.setopati.com/politics",
-				"category": "politics",
+				"category": "news",
 				"link-selector": "#content > div > section > div > div > a"
 			},
 			{
@@ -60,7 +70,7 @@
 			},
 			{
 				"url": "https://www.setopati.com/opinion",
-				"category": "opinion",
+				"category": "social",
 				"link-selector": "#content > div > section > div > div > a"
 			},
 			{
@@ -95,6 +105,11 @@
 		"weight": 40,
 		"pages": [
 			{
+				"url": "https://ratopati.com",
+				"category": "headline",
+				"link-selector": ".brkn-title > a"
+			},
+			{
 				"url": "https://ratopati.com/news",
 				"category": "news",
 				"link-selector": "div.ot-articles-material-blog-list .item-content > span > a"
@@ -106,7 +121,7 @@
 			},
 			{
 				"url": "https://ratopati.com/opinion",
-				"category": "opinion",
+				"category": "social",
 				"link-selector": "div.ot-articles-material-blog-list .item-content > span > a"
 			},
 			{
@@ -147,6 +162,11 @@
 		"mainUrl": "https://www.onlinekhabar.com",
 		"weight": 35,
 		"pages": [
+			{
+				"url": "https://www.onlinekhabar.com",
+				"category": "headline",
+				"link-selector": "#main > section > div > div > div > div > a"
+			},
 			{
 				"url": "https://www.onlinekhabar.com/business",
 				"category": "business",
@@ -224,9 +244,9 @@
 		"weight": 50,
 		"pages": [
 			{
-				"url": "https://halokhabar.com/",
+				"url": "https://halokhabar.com",
 				"category": "agriculture",
-				"link-selector": "div.container-wrapper > div > article > header > h2 > a"
+				"link-selector": "#home.tab-pane.active ul.section > li > h3 > a"
 			}
 		],
 		"article-detail-selectors": {
@@ -284,8 +304,13 @@
 		"weight": 50,
 		"pages": [
 			{
+				"url": "https://baahrakhari.com",
+				"category": "headline",
+				"link-selector": "div.container-wrapper > div > h2"
+			},
+			{
 				"url": "https://baahrakhari.com/news-article/1/Politics",
-				"category": "politics",
+				"category": "news",
 				"link-selector": "article > section > div.row.page-news-list > div > div > h3 > a"
 			},
 			{
@@ -300,7 +325,7 @@
 			},
 			{
 				"url": "https://baahrakhari.com/news-article/6/Thought",
-				"category": "opinion",
+				"category": "social",
 				"link-selector": "article > section > div.row.page-news-list > div > div > h3 > a"
 			}
 		],
@@ -319,8 +344,13 @@
 		"weight": 50,
 		"pages": [
 			{
+				"url": "https://pahilopost.com",
+				"category": "headline",
+				"link-selector": ".uk-heading-large > a"
+			},
+			{
 				"url": "https://pahilopost.com/content/category/politics.html",
-				"category": "politics",
+				"category": "news",
 				"link-selector": "h2 > a"
 			},
 			{
