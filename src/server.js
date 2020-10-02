@@ -29,7 +29,7 @@ app.use(morgan('combined'))
 app.use('/assets', express.static('assets'))
 
 var moesifMiddleware = moesif({
-	applicationId: process.env.MOESIF_APP_ID,
+	applicationId: process.env.MOESIF_APPLICATION_ID,
 
 	// Optional hook to link API calls to users
 	identifyUser: function (req, res) {
