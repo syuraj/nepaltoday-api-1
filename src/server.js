@@ -6,6 +6,7 @@ const timeout = require('connect-timeout')
 const helmet = require('helmet')
 const requireGraphQLFile = require('require-graphql-file')
 const { ApolloServer, gql } = require('apollo-server-express')
+const moesif = require('moesif-nodejs')
 require('./db-service/initialize')
 const mongooseSchema = require('./db-service/database/mongooseSchema')
 const resolvers = require('./database/resolvers')
@@ -26,6 +27,17 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(morgan('combined'))
 app.use('/assets', express.static('assets'))
+
+var moesifMiddleware = moesif({
+	applicationId: process.env.MOESIF_APP_ID,
+
+	// Optional hook to link API calls to users
+	identifyUser: function (req, res) {
+		return req.user ? req.user.id : undefined
+	},
+})
+app.use(moesifMiddleware)
+moesifMiddleware.startCaptureOutgoing()
 
 const typeDefSchema = requireGraphQLFile('./database/typeDefs.graphql')
 const typeDefs = gql(typeDefSchema)
