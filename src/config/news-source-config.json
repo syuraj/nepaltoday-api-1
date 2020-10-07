@@ -404,7 +404,7 @@
 		"weight": 50,
 		"pages": [
 			{
-				"url": "https://merolagani.com/NewsList.aspx?id=6&type=latest",
+				"url": "https://merolagani.com/",
 				"category": "share",
 				"link-selector": ".container .row h4.media-title > a"
 			}
